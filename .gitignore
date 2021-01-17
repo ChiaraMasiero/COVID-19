@@ -10,6 +10,8 @@
 *.zip
 *~
 
+*.ipynb_checkpoints
+
 # OS or Editor folders
 ._*
 .cache
