@@ -17,15 +17,15 @@ st.set_page_config(layout="wide")
 
 # ## Data Extraction and Loading
 
-# In[2]:
+# In[41]:
 
 
-demo_data = pd.read_csv('../auxiliary_data/regioni_istat_2020_01.csv').drop(
+demo_data = pd.read_csv('https://raw.githubusercontent.com/ChiaraMasiero/COVID-19/master/auxiliary_data/regioni_istat_2020_01.csv').drop(
     ['Tipo di indicatore demografico', 'Sesso', 'Età', 'Flags', 'Seleziona periodo'], axis=1)
 demo_data = demo_data[demo_data['Stato civile']=='totale']
 
 
-# In[3]:
+# In[42]:
 
 
 demo_data.at[24,'Territorio'] = 'P.A. Bolzano'
@@ -61,7 +61,7 @@ demo_data.rename(columns={'Value':'population'},inplace=True)
 # In[8]:
 
 
-macro_regions = pd.read_csv('../auxiliary_data/macro_regioni.csv', sep=';')
+macro_regions = pd.read_csv('https://raw.githubusercontent.com/ChiaraMasiero/COVID-19/master/auxiliary_data/macro_regioni.csv', sep=';')
 
 
 # In[9]:
